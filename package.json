@@ -1,7 +1,7 @@
 {
   "name": "restaurant-capstone-project",
   "version": "1.0.0",
-  "description": "simple restaurant project which showcases different food and has the capability to like them and open and see the details of different meals and comment on them",
+  "description": "simple restaurant project which showcases different meals. It has the capability to like any food you like and to click and see the details of each meal and comment on it.",
   "main": "./src/index.js",
   "scripts": {
     "test": "jest --verbose --coverage",
