@@ -3,17 +3,17 @@
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
     <br>
-  <h1 style="font-size: 35px; color: lightblue"><b>Leaderboard</b></h1>
+  <h1 style="font-size: 35px; color: lightblue"><b>Restaurant Capstone Project</b></h1>
 
 </div>
 
 <!-- TABLE OF CONTENTS -->
 
 
-# 📗 Table of Contents <a id="table-of-contents"></a>
+# 📗 Restaurant Capstone Project <a id="table-of-contents"></a>
 
 - [� Table of Contents](#table-of-contents)
-- [📖 Leaderboard ](#about-project)
+- [📖 Restaurant Capstone Project ](#about-project)
 - [🛠 Built With ](#built-with)
   - [Tech Stack ](#tech-stack)
   - [Key Features ](#key-features)
@@ -34,9 +34,9 @@
 <br>
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Leaderboard <a id="about-project"></a>
+# 📖 Restaurant Capstone Project <a id="about-project"></a>
 
-**Leaderboard** is a simple online leaderboard implemented as a web-based app that recalls and shows scores from an external API. There is a capability to add scores to the score board too. The project is implemented using Javascript ES6 and webpack.
+**Restaurant Capstone Project** is a simple online Restaurant Online webapp that shows different meals and has the capability of liking different food. You can also see the details of each meal in a popup window and add comments for each meal. The project is implemented using Javascript ES6 and webpack. It uses 'TheMealDB' for API calls.
 
 ## 🛠 Built With <a id="built-with"></a>
 
@@ -67,10 +67,10 @@
 
 ### Key Features <a id="key-features"></a>
 
-- **Display a smiple Leaderboard**
-- **Calls scores from an API**
-- **Add New Score**
-- **Refresh the board**
+- **Display a Meals Menu**
+- **Retrieves Different Meal Details using an API**
+- **Add Comment to each meal**
+- **Like Each Meal you like**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +78,7 @@
 
 ## 🚀 Live Demo <a id="live-demo"></a>
 
-- An implementation of this portfolio is live on [Github Pages](https://dev89s.github.io/leaderboard/dist/) (to be updated)
+- An implementation of this portfolio is live on [Github Pages](https://dev89s.github.io/restaurant-capstone-project/dist/) (to be updated)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,7 +105,7 @@ In order to reproduce the Leaderboard and be able to make changes for your own p
 
   1. Make a new directory and go inside the directory using cd command in terminal
   2. Use "git" to clone this repository into your local drive:
-      >```$ git clone https://github.com/dev89s/leaderboard```
+      >```$ git clone https://github.com/dev89s/restaurant-capstone-project```
   3. Run the command to install all necessary dependancies:
       >``` npm install ```
 
@@ -154,7 +154,7 @@ Then you can push the project into that repository and if you go to the reposito
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/dev89s/leaderboard/issues).
+Feel free to check the [issues page](https://github.com/dev89s/restaurant-capstone-project/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -191,6 +191,6 @@ I would like to thank Microverse online web development school for providing the
 
 ## 📝 License <a id="license"></a>
 
-This project is [MIT](https://github.com/dev89s/leaderboard/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/dev89s/restaurant-capstone-project/blob/develop/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
