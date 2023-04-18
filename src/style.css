@@ -17,6 +17,8 @@ body {
   font-family: 'Comic Neue', cursive;
 }
 
+/* ---- Header Styles ---- */
+
 header {
   border: 2px solid black;
   max-width: 90%;
@@ -37,9 +39,34 @@ nav ul {
   gap: 40px;
 }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 768px) {
   header {
     max-width: 60%;
     padding: 0 7%;
+  }
+}
+
+/* ---- Footer Style ---- */
+
+div.footer-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1.5px solid #000;
+  background-color: #fff;
+}
+
+h2.footer-header {
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 20px 30px;
+  font-size: 1.5em;
+}
+
+@media only screen and (min-width: 768px) {
+  h2.footer-header {
+    max-width: 60%;
+    padding: 20px 30px;
   }
 }
