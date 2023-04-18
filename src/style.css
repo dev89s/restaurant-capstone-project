@@ -1,6 +1,44 @@
 /* ---- General Styles ---- */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,300;0,900;1,400&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  margin: 0;
+}
+
+body {
+  font-family: 'Comic Neue', cursive;
+}
+
+header {
+  border: 2px solid black;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+.logo {
+  width: 15%;
+}
+
+nav {
+  margin-top: 40px;
+}
+
+nav ul {
+  margin: 0;
+}
+
+@media only screen and (min-width: 767px) {
+  header {
+    max-width: 60%;
+    padding: 0 7%;
+  }
 }
