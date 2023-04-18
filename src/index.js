@@ -1,4 +1,4 @@
 import './style.css';
-import loadList from './modules/load-list.js';
+import init from './modules/popup.js';
 
-loadList();
+init();
