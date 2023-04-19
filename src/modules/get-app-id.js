@@ -1,10 +1,10 @@
 const newApp = async () => {
   const appsUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
   const response = await fetch(appsUrl, {
-    method: "POST",
+    method: 'POST',
   });
   return response;
-}
+};
 
 const getAppId = async () => {
   if (!localStorage.getItem('appId')) {
@@ -12,10 +12,9 @@ const getAppId = async () => {
     const id = await response.text();
     localStorage.setItem('appId', JSON.stringify(id));
     return id;
-  } else {
-    const id = JSON.parse(localStorage.getItem('appId'));
-    return id;
   }
-}
+  const id = JSON.parse(localStorage.getItem('appId'));
+  return id;
+};
 
 export default getAppId;
