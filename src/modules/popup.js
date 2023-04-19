@@ -1,6 +1,6 @@
 import getMealById from './mealById.js';
 
-const commentsPopup = (meals) => {
+const commentsPopup = () => {
   const menuHolder = document.querySelectorAll('.meal-container');
   const mainMenu = document.querySelector('#appContainer');
   const popup = document.querySelector('#displayPopup');
@@ -19,7 +19,7 @@ const commentsPopup = (meals) => {
 
       if (comment === 'Comments') {
         const mealId = meal.getAttribute('data-mealid');
-        const mealDetails = getMealById(mealId, meals);
+        const mealDetails = getMealById(mealId);
 
         popup.innerHTML = `
           <i id="close-btn" class="fa-solid fa-xmark"></i>

@@ -1,4 +1,5 @@
-const getMealById = (mealId, meals) => {
+const getMealById = (mealId) => {
+  const meals = JSON.parse(localStorage.getItem('meals'));
   const meal = meals.find((meal) => {
     if (meal.idMeal === mealId) {
       return meal;
