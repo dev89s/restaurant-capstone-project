@@ -1,4 +1,5 @@
 import getMealById from './mealById.js';
+import createComment from './getComment.js';
 
 const commentsPopup = () => {
   const menuHolder = document.querySelectorAll('.meal-container');
@@ -13,13 +14,14 @@ const commentsPopup = () => {
   }
 
   menuHolder.forEach((meal) => {
-    meal.addEventListener('click', (event) => {
+    meal.addEventListener('click', async (event) => {
       const targetElement = event.target;
       const comment = targetElement.textContent;
 
       if (comment === 'Comments') {
         const mealId = meal.getAttribute('data-mealid');
         const mealDetails = getMealById(mealId);
+        const commentDetails = await createComment(mealId);
 
         popup.innerHTML = `
           <i id="close-btn" class="fa-solid fa-xmark"></i>
@@ -36,6 +38,15 @@ const commentsPopup = () => {
                 <li>Ingredient2: ${mealDetails.second}</li>
               </span>
             </ul>
+
+            <div class='mb-3'>
+              <h2 id='comment-header' class='text-center fw-bold'>Comments(${commentDetails.comments.length})</h2>
+              <div class='comment-display-container'>
+              ${commentDetails.comments.map((comment) => `
+              <span>${comment.creation_date} ${comment.username}: ${comment.comment}</span>
+            `).join('')}
+              </div>
+            </div>
           </div>
         `;
 
