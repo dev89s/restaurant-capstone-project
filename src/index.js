@@ -4,9 +4,9 @@ import loadList from './modules/load-list.js';
 import commentsPopup from './modules/popup.js';
 
 const init = async () => {
-  const meals = await getMeals();
-  loadList(meals);
-  commentsPopup(meals);
+  await getMeals();
+  loadList();
+  commentsPopup();
 };
 
 init();

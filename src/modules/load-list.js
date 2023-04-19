@@ -1,4 +1,5 @@
-const loadList = (meals) => {
+const loadList = () => {
+  const meals = JSON.parse(localStorage.getItem('meals'));
   const mealList = document.querySelector('div.meal-list');
   meals.forEach((meal) => {
     const mealCont = document.createElement('div');
