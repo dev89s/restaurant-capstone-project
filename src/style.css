@@ -178,8 +178,9 @@ h2.footer-header {
 }
 
 .main-meal {
-  width: 55vw;
-  height: 40vh;
+  width: 100%;
+  max-width: 450px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
@@ -193,11 +194,6 @@ h2.footer-header {
 
 @media only screen and (min-width: 768px) {
   #displayPopup {
-    width: 50%;
-  }
-
-  .popup-container {
-    padding-right: 40px;
-    width: 80%;
+    max-width: 600px;
   }
 }
