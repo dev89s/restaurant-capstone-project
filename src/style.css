@@ -109,6 +109,11 @@ i.like-btn {
   padding: 5px;
 }
 
+i.like-btn:hover {
+  color: red;
+  cursor: pointer;
+}
+
 button.comment-btn {
   width: 70%;
   padding: 3px;
