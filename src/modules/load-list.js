@@ -1,9 +1,8 @@
-import addLike from "./add-like.js";
-import getLikes from "./get-likes.js";
+import addLike from './add-like.js';
 
 const loadList = () => {
   const meals = JSON.parse(localStorage.getItem('meals'));
-  let likes = JSON.parse(localStorage.getItem('likes'));
+  const likes = JSON.parse(localStorage.getItem('likes'));
   const mealList = document.querySelector('div.meal-list');
   meals.forEach((meal) => {
     const mealCont = document.createElement('div');
