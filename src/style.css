@@ -170,6 +170,7 @@ h2.footer-header {
   position: absolute;
   right: 10px;
   top: 10px;
+  cursor: pointer;
 }
 
 .popup-container {

@@ -3,8 +3,6 @@ const getMeals = async () => {
   const jsonData = await mealsRes.json();
   const { meals } = jsonData;
 
-  // console.log(meals);
-
   return meals;
 };
 

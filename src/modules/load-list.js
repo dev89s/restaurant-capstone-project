@@ -1,7 +1,4 @@
-import getMeals from './get-meals.js';
-
-const loadList = async () => {
-  const meals = await getMeals();
+const loadList = (meals) => {
   const mealList = document.querySelector('div.meal-list');
   meals.forEach((meal) => {
     const mealCont = document.createElement('div');
