@@ -1,8 +1,6 @@
-import loadList from './load-list.js';
 import getMealById from './mealById.js';
 
-const init = async () => {
-  await loadList();
+const commentsPopup = (meals) => {
   const menuHolder = document.querySelectorAll('.meal-container');
   const mainMenu = document.querySelector('#appContainer');
   const popup = document.querySelector('#displayPopup');
@@ -15,13 +13,13 @@ const init = async () => {
   }
 
   menuHolder.forEach((meal) => {
-    meal.addEventListener('click', async (event) => {
+    meal.addEventListener('click', (event) => {
       const targetElement = event.target;
       const comment = targetElement.textContent;
 
       if (comment === 'Comments') {
         const mealId = meal.getAttribute('data-mealid');
-        const mealDetails = await getMealById(mealId);
+        const mealDetails = getMealById(mealId, meals);
 
         popup.innerHTML = `
           <i id="close-btn" class="fa-solid fa-xmark"></i>
@@ -51,4 +49,4 @@ const init = async () => {
   });
 };
 
-export default init;
+export default commentsPopup;

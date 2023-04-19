@@ -1,25 +1,21 @@
-import axios from 'axios';
+const getMealById = (mealId, meals) => {
+  const meal = meals.find((meal) => {
+    if (meal.idMeal === mealId) {
+      return meal;
+    }
+    return undefined;
+  });
 
-const getMealById = async (mealId) => {
-  try {
-    const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
-    const meal = response.data.meals[0];
+  const foodName = meal.strMeal;
+  const imageUrl = meal.strMealThumb;
+  const origin = meal.strArea;
+  const category = meal.strCategory;
+  const first = meal.strIngredient1;
+  const second = meal.strIngredient2;
 
-    const foodName = meal.strMeal;
-    const imageUrl = meal.strMealThumb;
-    const origin = meal.strArea;
-    const category = meal.strCategory;
-    const first = meal.strIngredient1;
-    const second = meal.strIngredient2;
-
-    return {
-      foodName, imageUrl, origin, category, first, second,
-    };
-  } catch (error) {
-    const page = document.querySelector('.meal-list');
-    page.innerHTML = error;
-    return null;
-  }
+  return {
+    foodName, imageUrl, origin, category, first, second,
+  };
 };
 
 export default getMealById;
