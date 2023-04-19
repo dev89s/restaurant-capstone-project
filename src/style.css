@@ -151,3 +151,49 @@ h2.footer-header {
     padding: 20px 7%;
   }
 }
+
+/* popup styles */
+
+#displayPopup {
+  display: none;
+  border: 2px solid black;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+}
+
+#close-btn {
+  font-size: 50px;
+  display: flex;
+  width: fit-content;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.popup-container {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.main-meal {
+  width: 100%;
+  max-width: 450px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.meal-details-container {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  #displayPopup {
+    max-width: 600px;
+  }
+}

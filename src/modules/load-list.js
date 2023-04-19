@@ -5,6 +5,7 @@ const loadList = async () => {
   const mealList = document.querySelector('div.meal-list');
   meals.forEach((meal) => {
     const mealCont = document.createElement('div');
+    mealCont.setAttribute('data-mealid', meal.idMeal);
     mealCont.classList.add('meal-container');
 
     const imgContainer = document.createElement('div');
