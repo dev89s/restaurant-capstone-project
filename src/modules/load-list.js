@@ -1,5 +1,7 @@
 const loadList = () => {
   const meals = JSON.parse(localStorage.getItem('meals'));
+  const likes = JSON.parse(localStorage.getItem('likes'));
+  console.log(likes);
   const mealList = document.querySelector('div.meal-list');
   meals.forEach((meal) => {
     const mealCont = document.createElement('div');
@@ -45,7 +47,19 @@ const loadList = () => {
     detailSecond.classList.add('meal-detail-second');
     detailSecond.classList.add('detail-rows');
     const likeCount = document.createElement('span');
-    likeCount.textContent = 'temp: 5 likes';
+    
+    // Read the like count and add to page
+    if (likes) {
+      const likeObj = likes.find(item => item.item_id === meal.idMeal);
+      if (likeObj) {
+        likeCount.textContent = `${likeObj.likes} likes`;
+      } else {
+        likeCount.textContent = `0 likes`;
+      }
+    } else {
+      likeCount.textContent = `0 likes`;
+    }
+    
     detailSecond.appendChild(likeCount);
 
     // Details Third Row - Comment button
