@@ -21,6 +21,7 @@
   "homepage": "https://github.com/dev89s/restaurant-capstone-project#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.21.2",
+    "@babel/preset-env": "^7.21.4",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",
