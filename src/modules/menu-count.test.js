@@ -79,7 +79,9 @@ describe('test menuCount DOM function', () => {
     // Assess
     expect(menuCounterEl.textContent).toBe(`Menu(${itemCount})`);
   });
+});
 
+describe('test menuCount function using the app', () => {
   test('menuCount counts the DOM elements in real scenario', async () => {
     // Arrange
     const dom = new JSDOM();
