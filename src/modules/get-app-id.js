@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 const newApp = async () => {
   const appsUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
   const response = await fetch(appsUrl, {

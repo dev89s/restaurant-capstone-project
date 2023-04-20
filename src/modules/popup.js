@@ -1,6 +1,5 @@
 import getMealById from './mealById.js';
 import { createComment, getComments } from './getComment.js';
-import commentCounter from './commentCount.js';
 
 const commentsPopup = () => {
   const menuHolder = document.querySelectorAll('.meal-container');

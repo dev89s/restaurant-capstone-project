@@ -11,14 +11,11 @@ const commentCounter = () => {
           const commentSpans = popup.querySelectorAll('.comment-list');
           const commentCount = commentSpans.length;
           const commentHeader = popup.querySelector('#comment-header');
-          commentHeader.textContent = `Comments(${commentCount})`
-          console.log(commentCount);
+          commentHeader.textContent = `Comments(${commentCount})`;
         }, 500);
       }
     });
   });
 };
-
-
 
 export default commentCounter;
