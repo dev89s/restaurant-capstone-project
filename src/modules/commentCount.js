@@ -8,10 +8,20 @@ const commentCounter = () => {
       if (comment === 'Comments') {
         const popup = document.querySelector('#displayPopup');
         setTimeout(() => {
-          const commentSpans = popup.querySelectorAll('.comment-list');
-          const commentCount = commentSpans.length;
-          const commentHeader = popup.querySelector('#comment-header');
-          commentHeader.textContent = `Comments(${commentCount})`;
+          let commentHeader = document.querySelector('#comment-header');
+          let tries = 0;
+          const updateCommentCount = () => {
+            commentHeader = document.querySelector('#comment-header');
+            if (commentHeader) {
+              const commentSpans = popup.querySelectorAll('.comment-list');
+              const commentCount = commentSpans.length;
+              commentHeader.textContent = `Comments(${commentCount})`;
+            } else if (tries < 10) {
+              tries++;
+              setTimeout(updateCommentCount, 100);
+            }
+          };
+          updateCommentCount();
         }, 500);
       }
     });
