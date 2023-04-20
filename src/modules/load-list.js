@@ -1,3 +1,5 @@
+import addLike from './add-like.js';
+
 const loadList = () => {
   const meals = JSON.parse(localStorage.getItem('meals'));
   const likes = JSON.parse(localStorage.getItem('likes'));
@@ -78,6 +80,16 @@ const loadList = () => {
     mealCont.appendChild(mealDetails);
 
     mealList.appendChild(mealCont);
+
+    // Event listener for like button
+    likeBtn.addEventListener('click', async () => {
+      likeBtn.classList.toggle('fa-regular');
+      likeBtn.classList.toggle('fa-solid');
+      likeBtn.style.color = 'red';
+      const likeNum = Number(likeCount.textContent.split(' ')[0]);
+      likeCount.textContent = `${likeNum + 1} likes`;
+      await addLike(meal.idMeal);
+    }, { once: true });
   });
 };
 
