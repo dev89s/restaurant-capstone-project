@@ -196,6 +196,8 @@ h2.footer-header {
 .comment-display-container {
   display: flex;
   flex-direction: column;
+  height: 20vh;
+  overflow-y: auto;
 }
 
 @media only screen and (min-width: 768px) {

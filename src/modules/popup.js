@@ -28,8 +28,8 @@ const commentsPopup = () => {
         popup.innerHTML = `
           <i id="close-btn" class="fa-solid fa-xmark"></i>
           <div class='popup-container'>
-            <img class='main-meal img-fluid' src=${mealDetails.imageUrl}>
-            <h1 class='text-center fw-bold mt-3'>${mealDetails.foodName}</h1>
+            <img class='main-meal img-fluid mb-4' src=${mealDetails.imageUrl}>
+            <h1 class='text-center fw-bold mb-4'>${mealDetails.foodName}</h1>
             <ul class='meal-details-container'>
               <span>
                 <li>Course: ${mealDetails.category}</li>
@@ -42,7 +42,7 @@ const commentsPopup = () => {
             </ul>
 
             <div class='mb-3'>
-              <h2 id='comment-header' class='text-center fw-bold'>Comments(${comments.length})</h2>
+              <h2 id='comment-header' class='text-center fw-bold mb-3'>Comments(${comments.length})</h2>
               <div class='comment-display-container'>
               ${comments.map((comment) => `
               <span>${comment.creation_date} ${comment.username}: ${comment.comment}</span>
@@ -51,7 +51,7 @@ const commentsPopup = () => {
             </div>
 
             <div>
-              <h2 class='text-center fw-bold mb-3'>Add a comment</h2>
+              <h2 class='text-center fw-bold mb-4'>Add a comment</h2>
               <form id='form'>
                 <input id='name' type='text' placeholder='Your name' required>
                 <textarea id='message' placeholder='Your insights'></textarea>
