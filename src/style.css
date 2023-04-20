@@ -203,3 +203,33 @@ h2.footer-header {
     max-width: 600px;
   }
 }
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#name {
+  width: 40%;
+  border: 2px solid;
+  padding: 2px 5px;
+}
+
+#message {
+  width: 60%;
+  height: 80px;
+  border: 2px solid;
+  padding: 2px 5px;
+}
+
+#comment {
+  width: 40%;
+  border: 2px solid;
+  background-color: white;
+}
+
+#comment:hover {
+  background-color: rgb(41, 38, 38);
+  color: white;
+}
