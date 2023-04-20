@@ -2,11 +2,11 @@ import axios from 'axios';
 
 const appId = JSON.parse(localStorage.getItem('appId'));
 
-const createComment = async (itemId) => {
+const createComment = async (itemId, name, comment) => {
   const newComment = {
     item_id: itemId,
-    username: 'Jane',
-    comment: 'hello',
+    username: name,
+    comment,
   };
 
   await axios.post(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments`, newComment);
@@ -21,4 +21,19 @@ const createComment = async (itemId) => {
   return { comments };
 };
 
-export default createComment;
+const getComments = async (mealId, appId) => {
+  let comments = [];
+  try {
+    const commentInfo = await axios.get(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments?item_id=${mealId}`);
+    comments = commentInfo.data.map((comment) => ({
+      creation_date: comment.creation_date,
+      username: comment.username,
+      comment: comment.comment,
+    }));
+  } catch (error) {
+    return [];
+  }
+  return comments;
+};
+
+export { createComment, getComments };
