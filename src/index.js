@@ -10,7 +10,7 @@ const init = async () => {
   await getLikes();
   await getMeals();
   loadList();
-  commentsPopup();
+  await commentsPopup();
   menuCount();
   commentCounter();
 };
