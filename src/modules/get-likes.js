@@ -10,6 +10,8 @@ const getLikes = async () => {
     const likes = await response.text();
     if (likes !== '') {
       localStorage.setItem('likes', likes);
+    } else {
+      localStorage.removeItem('likes');
     }
   }
 };
