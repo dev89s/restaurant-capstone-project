@@ -196,7 +196,7 @@ h2.footer-header {
 .comment-display-container {
   display: flex;
   flex-direction: column;
-  height: 20vh;
+  max-height: 20vh;
   overflow-y: auto;
 }
 
