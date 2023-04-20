@@ -1,7 +1,7 @@
 import getMealById from './mealById.js';
 import { createComment, getComments } from './getComment.js';
 
-const commentsPopup = () => {
+const commentsPopup = async () => {
   const menuHolder = document.querySelectorAll('.meal-container');
   const mainMenu = document.querySelector('#appContainer');
   const popup = document.querySelector('#displayPopup');
@@ -42,10 +42,10 @@ const commentsPopup = () => {
             </ul>
 
             <div class='mb-3'>
-              <h2 id='comment-header' class='text-center fw-bold mb-3'>Comments(${comments.length})</h2>
+              <h2 id='comment-header' class='text-center fw-bold mb-3'>Comments()</h2>
               <div class='comment-display-container'>
               ${comments.map((comment) => `
-              <span>${comment.creation_date} ${comment.username}: ${comment.comment}</span>
+              <span class='comment-list'>${comment.creation_date} ${comment.username}: ${comment.comment}</span>
             `).join('')}
               </div>
             </div>
