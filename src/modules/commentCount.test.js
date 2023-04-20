@@ -1,12 +1,13 @@
+import commentCounter from './commentCount.js';
+
 const jsdom = require('jsdom');
+
 const { JSDOM } = jsdom;
 
 const { window } = new JSDOM('<!doctype html><html><body></body></html>');
 
 global.window = window;
 global.document = window.document;
-
-import commentCounter from "./commentCount.js";
 
 describe('commentCounter', () => {
   document.body.innerHTML = `
@@ -20,13 +21,12 @@ describe('commentCounter', () => {
     </div>
     `;
   commentCounter();
-;
 
   test('updates comment count header when new comments are added', async () => {
     const commentBtn = document.querySelector('.comment-btn');
     commentBtn.click();
 
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     const commentHeader = document.querySelector('#comment-header');
     expect(commentHeader.textContent).toBe('Comments(2)');
@@ -42,12 +42,12 @@ describe('commentCounter', () => {
       </div>
     `;
     commentCounter();
-  
+
     const commentBtn = document.querySelector('.comment-btn');
     commentBtn.click();
-  
-    await new Promise(resolve => setTimeout(resolve, 1000));
-  
+
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     const commentHeader = document.querySelector('#comment-header');
     expect(commentHeader.textContent).toBe('Comments(0)');
   });

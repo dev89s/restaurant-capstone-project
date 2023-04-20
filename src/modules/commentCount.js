@@ -17,7 +17,7 @@ const commentCounter = () => {
               const commentCount = commentSpans.length;
               commentHeader.textContent = `Comments(${commentCount})`;
             } else if (tries < 10) {
-              tries++;
+              tries += 1;
               setTimeout(updateCommentCount, 100);
             }
           };
