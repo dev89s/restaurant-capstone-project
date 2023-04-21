@@ -135,6 +135,12 @@ Then you can push the project into that repository and if you go to the reposito
 - GitHub: [@dev89s](https://github.com/dev89s)
 - Twitter: [@dev89_s](https://twitter.com/dev89_s)
 
+👤 **Spencer Okyere**
+
+- GitHub: [@skabeo](https://github.com/skabeo)
+- Twitter: [@black_okyere](https://twitter.com/black_okyere)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/okyere-spencer-9b602623b)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

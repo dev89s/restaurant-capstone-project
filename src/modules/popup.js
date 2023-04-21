@@ -42,7 +42,7 @@ const commentsPopup = async () => {
             </ul>
 
             <div class='mb-3'>
-              <h2 id='comment-header' class='text-center fw-bold mb-3'>Comments()</h2>
+              <h2 id='comment-header' class='text-center fw-bold mb-3'>Comments(${comments.length})</h2>
               <div class='comment-display-container'>
               ${comments.map((comment) => `
               <span class='comment-list'>${comment.creation_date} ${comment.username}: ${comment.comment}</span>
