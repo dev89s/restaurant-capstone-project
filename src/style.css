@@ -1,0 +1,242 @@
+/* ---- General Styles ---- */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,300;0,900;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  margin: 0;
+}
+
+body {
+  font-family: 'Comic Neue', cursive;
+}
+
+/* ---- Header Styles ---- */
+
+header {
+  border: 2px solid black;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+.logo {
+  width: 15%;
+}
+
+nav {
+  margin-top: 40px;
+}
+
+nav ul {
+  margin: 0;
+  gap: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    max-width: 60%;
+    padding: 0 7%;
+  }
+}
+
+/* ---- Main Section Styles ---- */
+
+div.meal-list {
+  margin: 0 auto;
+  padding: 2%;
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 20px;
+  row-gap: 50px;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin-bottom: 80px;
+}
+
+div.meal-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  gap: 5px;
+}
+
+div.meal-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+div.img-container {
+  width: 100%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+img.meal-image {
+  width: 100%;
+}
+
+.detail-rows {
+  align-items: center;
+}
+
+div.meal-detail-first {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.meal-detail-second {
+  display: flex;
+  justify-content: flex-end;
+}
+
+div.meal-detail-third {
+  display: flex;
+  justify-content: center;
+}
+
+i.like-btn {
+  padding: 5px;
+}
+
+i.like-btn:hover {
+  color: red;
+  cursor: pointer;
+}
+
+button.comment-btn {
+  width: 70%;
+  padding: 3px;
+}
+
+@media screen and (min-width: 768px) {
+  div.meal-list {
+    max-width: 60%;
+    padding: 10px;
+    padding-top: 30px;
+    gap: 40px;
+  }
+
+  div.meal-container {
+    max-width: 200px;
+  }
+}
+
+/* ---- Footer Style ---- */
+
+div.footer-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1.5px solid #000;
+  background-color: #fff;
+}
+
+h2.footer-header {
+  margin: 0 auto;
+  width: 90%;
+  padding: 20px 30px;
+  font-size: 1.5em;
+}
+
+@media only screen and (min-width: 768px) {
+  h2.footer-header {
+    max-width: 70%;
+    padding: 20px 7%;
+  }
+}
+
+/* popup styles */
+
+#displayPopup {
+  display: none;
+  border: 2px solid black;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+}
+
+#close-btn {
+  font-size: 50px;
+  display: flex;
+  width: fit-content;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.popup-container {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.main-meal {
+  width: 100%;
+  max-width: 450px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.meal-details-container {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.comment-display-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 20vh;
+  overflow-y: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  #displayPopup {
+    max-width: 600px;
+  }
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#name {
+  width: 40%;
+  border: 2px solid;
+  padding: 2px 5px;
+}
+
+#message {
+  width: 60%;
+  height: 80px;
+  border: 2px solid;
+  padding: 2px 5px;
+}
+
+#comment {
+  width: 40%;
+  border: 2px solid;
+  background-color: white;
+}
+
+#comment:hover {
+  background-color: rgb(41, 38, 38);
+  color: white;
+}
