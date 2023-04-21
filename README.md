@@ -85,7 +85,7 @@
 
 ## 🎬 Representation <a id="representation"></a>
 
-- A representation of the project by Author himself. [Watch here](https://drive.google.com/file/d/1OKwOkTuT8Y0ivJ_1OD1ZzPWcH8VRNire/view?usp=sharing)
+- A representation of the project by Authors. [Watch here](https://drive.google.com/file/d/1OKwOkTuT8Y0ivJ_1OD1ZzPWcH8VRNire/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
