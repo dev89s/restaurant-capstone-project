@@ -1,4 +1,5 @@
 import getAppId from './get-app-id.js';
+const fetch = require('node-fetch');
 
 const getLikes = async () => {
   const appId = await getAppId();

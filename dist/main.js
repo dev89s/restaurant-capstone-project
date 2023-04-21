@@ -40,6 +40,16 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
 
 /***/ }),
 
+/***/ "./node_modules/node-fetch/browser.js":
+/*!********************************************!*\
+  !*** ./node_modules/node-fetch/browser.js ***!
+  \********************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+eval("\n\n// ref: https://github.com/tc39/proposal-global\nvar getGlobal = function () {\n\t// the only reliable means to get the global object is\n\t// `Function('return this')()`\n\t// However, this causes CSP violations in Chrome apps.\n\tif (typeof self !== 'undefined') { return self; }\n\tif (typeof window !== 'undefined') { return window; }\n\tif (typeof __webpack_require__.g !== 'undefined') { return __webpack_require__.g; }\n\tthrow new Error('unable to locate global object');\n}\n\nvar globalObject = getGlobal();\n\nmodule.exports = exports = globalObject.fetch;\n\n// Needed for TypeScript and Webpack.\nif (globalObject.fetch) {\n\texports[\"default\"] = globalObject.fetch.bind(globalObject);\n}\n\nexports.Headers = globalObject.Headers;\nexports.Request = globalObject.Request;\nexports.Response = globalObject.Response;\n\n\n//# sourceURL=webpack://restaurant-capstone-project/./node_modules/node-fetch/browser.js?");
+
+/***/ }),
+
 /***/ "./src/style.css":
 /*!***********************!*\
   !*** ./src/style.css ***!
@@ -156,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _get_app_id_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./get-app-id.js */ \"./src/modules/get-app-id.js\");\n\n\nconst getLikes = async () => {\n  const appId = await (0,_get_app_id_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  const likeUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes/`;\n  const response = await fetch(likeUrl, {\n    method: 'Get',\n  });\n  if (response.ok) {\n    const likes = await response.text();\n    if (likes !== '') {\n      localStorage.setItem('likes', likes);\n    } else {\n      localStorage.removeItem('likes');\n    }\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getLikes);\n\n//# sourceURL=webpack://restaurant-capstone-project/./src/modules/get-likes.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _get_app_id_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./get-app-id.js */ \"./src/modules/get-app-id.js\");\n\nconst fetch = __webpack_require__(/*! node-fetch */ \"./node_modules/node-fetch/browser.js\");\n\nconst getLikes = async () => {\n  const appId = await (0,_get_app_id_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  const likeUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes/`;\n  const response = await fetch(likeUrl, {\n    method: 'Get',\n  });\n  if (response.ok) {\n    const likes = await response.text();\n    if (likes !== '') {\n      localStorage.setItem('likes', likes);\n    } else {\n      localStorage.removeItem('likes');\n    }\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getLikes);\n\n//# sourceURL=webpack://restaurant-capstone-project/./src/modules/get-likes.js?");
 
 /***/ }),
 
@@ -166,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst getMeals = async () => {\n  const mealsRes = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=');\n  const jsonData = await mealsRes.json();\n  const { meals } = jsonData;\n  localStorage.setItem('meals', JSON.stringify(meals));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getMeals);\n\n//# sourceURL=webpack://restaurant-capstone-project/./src/modules/get-meals.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst fetch = __webpack_require__(/*! node-fetch */ \"./node_modules/node-fetch/browser.js\");\n\nconst getMeals = async () => {\n  const mealsRes = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=');\n  const jsonData = await mealsRes.json();\n  const { meals } = jsonData;\n  localStorage.setItem('meals', JSON.stringify(meals));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getMeals);\n\n//# sourceURL=webpack://restaurant-capstone-project/./src/modules/get-meals.js?");
 
 /***/ }),
 
@@ -679,6 +689,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 				}
 /******/ 			}
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
