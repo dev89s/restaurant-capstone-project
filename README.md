@@ -79,7 +79,7 @@
 
 ## 🚀 Live Demo <a id="live-demo"></a>
 
-- An implementation of this portfolio is live on [Github Pages](https://dev89s.github.io/restaurant-capstone-project/dist/) (to be updated)
+- An implementation of this portfolio is live on [Github Pages](https://dev89s.github.io/restaurant-capstone-project/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
